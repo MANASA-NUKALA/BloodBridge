@@ -1,3 +1,4 @@
+//adminRoutes.js
 const express = require("express");
 const authMiddelware = require("../middleware/authMiddleware.js");
 const {

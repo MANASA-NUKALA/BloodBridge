@@ -1,3 +1,6 @@
+//donar home page 
+
+
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +40,7 @@ const HomePage = () => {
             visible={true}
             height="200"
             width="200"
-            color="#4fa94d"
+            color="#7a4da9ff"
             ariaLabel="progress-bar-loading"
             wrapperStyle={{}}
             wrapperClass=""
@@ -59,7 +62,7 @@ const HomePage = () => {
             <table className="table">
               <thead>
                 <tr>
-                  <th scope="col">Blood Groud</th>
+                  <th scope="col">Blood Group</th>
                   <th scope="col">InventoryType</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Donar Email</th>
