@@ -1,8 +1,7 @@
-Here’s a **professional, detailed, and clean README** for your project named **BLOOD Bridge**:
 
 ---
 
-# 🩸 BLOOD Bridge
+# 🩸 BLOOD-BRIDGE
 
 > A real-time, life-saving platform to connect blood donors with those in urgent need.
 
@@ -10,7 +9,7 @@ Here’s a **professional, detailed, and clean README** for your project named *
 
 ## 🚀 Overview
 
-**BLOOD Bridge** is a full-stack web application designed to bridge the gap between **blood donors** and **recipients** during medical emergencies. With live tracking, real-time alerts, and verified user profiles, the system ensures timely and secure blood donations.
+**BLOOD BRIDGE** is a full-stack web application designed to bridge the gap between **blood donors** and **recipients** during medical emergencies. With live tracking, real-time alerts, and verified user profiles, the system ensures timely and secure blood donations.
 
 ---
 
@@ -49,12 +48,12 @@ BLOOD-Bridge/
 │       ├── pages/
 │       ├── services/
 │       └── App.jsx
-├── server/             # Backend with Express
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── server.js
+├          
+│── controllers/          # Backend with Express
+│── middleware/
+│── models/
+│── routes/
+│── server.js
 ├── .env
 ├── README.md
 └── package.json
@@ -67,8 +66,8 @@ BLOOD-Bridge/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/BLOOD-Bridge.git
-cd BLOOD-Bridge
+git clone https://github.com/MANASA-NUKALA/BLOOD-BRIDGE.git
+cd BLOOD-BRIDGE
 ```
 
 ### 2. Setup Backend
@@ -103,14 +102,6 @@ npm run dev
 
 ---
 
-## 🌍 Deployment
-
-You can deploy:
-
-* **Frontend** on Vercel/Netlify
-* **Backend** on Render/Heroku
-* **Database** on MongoDB Atlas
-* **Realtime services** on Firebase
 
 ---
 
@@ -140,7 +131,7 @@ You can deploy:
 
 ---
 
-## 🩸 Why BLOOD Bridge?
+## 🩸 Why BLOOD-BRIDGE?
 
 Because **every second counts** when a life is on the line. BLOOD Bridge is your digital companion in emergencies, ensuring no one has to wait for help when it matters the most.
 
