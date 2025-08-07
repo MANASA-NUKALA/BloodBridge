@@ -19,7 +19,7 @@ const Header = () => {
     <>
         <nav className='navbar'>
             <div className="container-fluid">
-                <div className="navbar-brand h1"><MdOutlineBloodtype color='red'/>RED <span className='gold'>GOLD</span></div>
+                <div className="navbar-brand h1"><MdOutlineBloodtype color='red'/>RED <span className='gold'>LINE</span></div>
                 <ul className='navbar-nav flex-row'>
                     <li className="nav-item mx-3">
                         <p className='nav-link'><FaUserAlt/> Welcome <span className='gold'> {user?.name || user?.hospitalName || user?.organisationName} &nbsp;</span>
