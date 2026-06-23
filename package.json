@@ -10,7 +10,8 @@
     "client-install": "npm i --prefix ./client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "postinstall": "npm install --prefix client",
-    "heroku-postbuild": "npm run build --prefix client"
+    "heroku-postbuild": "npm run build --prefix client",
+    "build": "npm run client-install && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
