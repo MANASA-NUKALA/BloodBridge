@@ -16,8 +16,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
 
   return (
     <div>
-      <form
-        style={{ width: "25rem" }}
+      <form className="auth-form"
         onSubmit={(e) => {
           if (formType === "login")
             return handleLogin(e, email, password, role);

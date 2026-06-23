@@ -11,7 +11,7 @@ export const userLogin = createAsyncThunk(
             if(data.success){
                 localStorage.setItem('token', data.token);
                 toast.success(data.message)
-                window.location.replace('/');
+                window.location.replace('/home');
             }
             return data;
         } catch (error) {
@@ -37,7 +37,7 @@ export const userRegister = createAsyncThunk(
         address,
         phone}, {rejectWithValue}) => {
             try{
-                const {data}=await API.post('auth/register',{
+                const {data}=await API.post('/auth/register',{ 
                     name,
                     role,
                     email,

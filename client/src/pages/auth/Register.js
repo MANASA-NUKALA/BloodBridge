@@ -6,39 +6,39 @@ import {DNA} from 'react-loader-spinner'
 const Register = () => {
   const {loading,error} = useSelector(state => state.auth)
   return (
-    <>
-    {error && <span>{alert(error)}</span>}
-        <div className='row'>
-          <section className="vh-100">
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-sm-4 text-black">
-                  <div className="px-5 ms-xl-4">
-                      <img src="./assets/logo.png" className='logo-login' alt="Red Gold" />
-                  </div>
-                  <div className="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-                  {loading ? <div className="d-flex w-100 h-100 align-items-center justify-content-center">
-                    <DNA
-                    visible={true}
-                    height="400"
-                    width="400"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper"
-                    />
-                    </div> :(
-                    <Form formTitle={"Register"} submitBtn={"Register"} formType={'register'} />
-                    )}
-                  </div>
-                </div>
-                <div className="col-sm-6 px-0 d-none d-sm-block">
-                  <img src="./assets/banner2.jpg" alt="Login" className="banner" />
-                </div>
+    <div className="auth-panel">
+      {error && <span>{alert(error)}</span>}
+      <div className="auth-card">
+        <div className="auth-left">
+          <div className="px-2">
+            <img src="./assets/logo.png" className='logo-login' alt="Red Gold" />
+          </div>
+          <div className="d-flex align-items-center h-custom-2 mt-3">
+            {loading ? (
+              <div className="d-flex w-100 h-100 align-items-center justify-content-center">
+                <DNA
+                  visible={true}
+                  height="200"
+                  width="200"
+                  ariaLabel="dna-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="dna-wrapper"
+                />
               </div>
-            </div>
-          </section>
+            ) : (
+              <Form formTitle={"Register"} submitBtn={"Register"} formType={'register'} />
+            )}
+          </div>
         </div>
-    </>
+        <div className="auth-right d-none d-md-flex">
+          <div style={{padding:'2rem', textAlign:'center'}}>
+            <h3>Welcome to Blood Bridge</h3>
+            <p className="text-muted-2">Join our community — donate, manage, and save lives.</p>
+            <img src="./assets/banner2.jpg" alt="Banner" className="banner rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

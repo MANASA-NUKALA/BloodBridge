@@ -21,15 +21,23 @@ const registerController = async (req, res) => {
       await user.save();
       return res.status(201).send({
         success: true,
-        message: "User Registerd Successfully",
+        message: "User Registered Successfully",
         user,
       });
     } catch (error) {
-      console.log(error);
+      console.log('Register error:', error);
+      if (error.name === 'ValidationError') {
+        const messages = Object.values(error.errors).map((e) => e.message);
+        return res.status(400).send({
+          success: false,
+          message: 'Validation Error',
+          errors: messages,
+        });
+      }
       res.status(500).send({
         success: false,
         message: "Error In Register API",
-        error,
+        error: error.message,
       });
     }
   };
@@ -45,9 +53,9 @@ const loginController = async (req, res) => {
     }
     //check role
     if (user.role !== req.body.role) {
-      return res.status(500).send({
+      return res.status(400).send({
         success: false,
-        message: "role dosent match",
+        message: "Role doesn't match",
       });
     }
     //compare password
@@ -56,7 +64,7 @@ const loginController = async (req, res) => {
       user.password
     );
     if (!comparePassword) {
-      return res.status(500).send({
+      return res.status(401).send({
         success: false,
         message: "Invalid Credentials",
       });
@@ -72,11 +80,11 @@ const loginController = async (req, res) => {
     });
 
   } catch (error) {
-    console.log(error);
+    console.log('Login error:', error);
     res.status(500).send({
       success: false,
       message: "Error In Login API",
-      error,
+      error: error.message,
     });
   }
 };

@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import Landing from './pages/Landing';
 import {Toaster} from 'react-hot-toast'
 import ProtectedRoute from './components/routes/ProtectedRoute';
 import PublicRoute from './components/routes/PublicRoute';
@@ -22,6 +23,12 @@ function App() {
     <div><Toaster position="top-left" /></div>
       <Routes>
         <Route path="/" element={
+            <PublicRoute>
+              <Landing />
+            </PublicRoute>
+        } />
+
+        <Route path="/home" element={
             <ProtectedRoute>
               <HomePage/>
             </ProtectedRoute>
