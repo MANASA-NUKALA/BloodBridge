@@ -8,7 +8,9 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix ./client",
     "client-install": "npm i --prefix ./client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "postinstall": "npm install --prefix client",
+    "heroku-postbuild": "npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
